@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/4b870e2350.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+    <title>Anime Scene Finder</title>
+</head>
+<body>
+    <section id="landing__page">
+        <figure>
+            <img src="./assets/anime-landscape-3.jpeg" class="landing__background" alt="">
+        </figure>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title header__title">Anime Scene Search</h1>
+                <h2 class="sub-title header__sub-title">Find any anime with only a screengrab!</h2>
+                <p class="header__para">Simply enter the URL where the scene image is stored below, hit <span class="color__secondary">Lets get started</span> and find out not only the name of the anime, but the episode it is from as well as how far into that episode the scene appears!</p>
+                <button id="request__submit" class="header__submit click" onclick="toggleSearchModal()">Lets Get Started!</button>
+            </div>
+        </header>
+        <div class="search__modal">
+            <div class="search__modal--content">
+                <form id="search-form" onsubmit="toggleResultsModal()">
+                    <label for="input-field" class="input__label">Image URL:</label>
+                    <input type="text" id="input-field" name="img-url" placeholder="Enter image URL" class="input__text">
+                    <label for="image-upload" class="input__label">Upload Image:</label>
+                    <input type="file" id="image-upload" name="image" accept="image/*" class="input__file">
+                    <button type="submit" class="input__btn click">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="results__modal">
+            <div class="results__modal--content">
+                <h1 class="results__title title">Here Are Your Results:</h1>
+                <div class="anime-list">
+                    <div class="anime">
+                      <div class="anime__title">
+                        Anime Title:
+                      </div>
+                      <div class="anime__episode">
+                        Episode #:
+                      </div>
+                      <div class="anime__time">
+                        Appears at Timestamp:
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Big Shoulders Inline", sans-serif;
+}
+
+.title {
+    color: coral;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.sub-title {
+    color: coral;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    background-color:rgba(0, 255, 255, 0.596);
+    color: darkorange;
+    border: none;
+    border-radius: 8px;
+}
+
+.container {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.color__secondary {
+    color: aqua;
+}
+
+.click {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.search__modal--open .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
+.results__modal--open .search__modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
+/*
+
+LANDING PAGE
+
+*/
+
+#landing__page {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #242424be;
+    border: none;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.landing__background {
+    width: 100%;
+    height: 100vh;
+}
+
+.header__title {
+    margin: 0 12px;
+}
+
+.header__para {
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 460px;
+    color:burlywood;
+    margin-bottom: 12px;
+}
+
+#header__input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.header__input--text {
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    line-height: 2;
+    margin-left: 24px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 14%;
+}
+
+.header__input--text:hover {
+    transform: scale(1.1);
+}
+
+.header__submit {
+    width: 50%;
+    line-height: 2;
+}
+
+.header__submit:hover {
+    background-color:rgba(0, 255, 255, 0.856);
+    /* border: 2px solid #242424; */
+    transform: scale(1.1);
+    transition: all 100ms ease;
+}
+
+.header__submit:active {
+    transform: scale(0.9);
+    transition: all 200ms ease;
+}
+
+/*
+
+SEARCH MODAL
+
+*/
+
+.search__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1100px;
+    height: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.search__modal--content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #242424be;
+    border: none;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+#search-form {
+    width: 50%;
+    line-height: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.input__label {
+    font-size: 48px;
+    font-weight: bold;
+    color: aqua;
+    text-align: center;
+}
+
+.input__text {
+    font-size: 24px;
+    text-align: center;
+}
+
+.input__file {
+    transform: scale(1.5);
+    margin-left: 50%;
+    color: aqua;
+}
+
+.input__btn {
+    font-size: 32px;
+    margin-top: 24px;
+    line-height: 1.5;
+}
+
+.search__modal--open .search__modal {
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 #2424248a;
+    visibility: visible;
+}
+
+/*
+RESULTS MODAL
+*/
+
+.results__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1100px;
+    height: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.results__modal--content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #242424be;
+    border: none;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.results__modal--open .results__modal {
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 #2424248a;
+    visibility: visible;
+}
+
+.anime__title, .anime__episode, .anime__time {
+    font-size: 24px;
+    color: aqua;
+    margin-bottom: 12px;
+    line-height: 2;
+    font-weight: bold;
+}
