@@ -45,11 +45,13 @@ async function getResults(event) {
 
     if (!inputURL && !file) {
         alert("Please enter an image URL or choose an image file.");
+        document.body.classList.remove("results__modal--open");
         return;
     }
 
     if (inputURL && !isValidURL(inputURL)) {
         alert("Please enter a valid image URL.");
+        document.body.classList.remove("results__modal--open");
         return;
     }
     let data;
@@ -59,6 +61,7 @@ async function getResults(event) {
             method:'GET',
         }).then((response) => {
             if(!response.ok){
+                document.body.classList.remove("results__modal--open");
                 alert('error, invalid request')
             }
             return response.json()
@@ -72,6 +75,7 @@ async function getResults(event) {
             body: formData
         }).then(response => {
             if(!response.ok){
+                document.body.classList.remove("results__modal--open");
                 alert('error, invalid request')
             }
             return response.json()
