@@ -333,6 +333,16 @@ function postAnime(post) {
     `
 }
 
+function startOver() {
+    if (isSearchModalOpen === true || isResultsModalOpen === true) {
+        document.getElementById("input-field").value = "";
+        return document.body.classList.remove("search__modal--open", "results__modal--open");
+    }
+    else {
+        return true;
+    }
+}
+
 console.log(animeListArr);
 
 // Attach event listener to the form

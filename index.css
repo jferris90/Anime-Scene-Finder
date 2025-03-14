@@ -150,6 +150,21 @@ LANDING PAGE
     transition: all 200ms ease;
 }
 
+.back__btn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #d40707;
+    color: white;
+    position: fixed;
+    top: 32px;
+    right: 40px;
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
+}
+
 /*
 
 SEARCH MODAL
@@ -425,8 +440,15 @@ FOOTER
     }
 }
 
-@media (max-height: 740px) {
+@media (max-height: 800px) {
     #footer {
         opacity: 0;
+    }
+
+    .back__btn {
+        width: 50px;
+        height: 50px;
+        top: 16px;
+        right: 16px;
     }
 }
