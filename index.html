@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <script src="https://kit.fontawesome.com/4b870e2350.js" crossorigin="anonymous"></script>
-    <script src="./script.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Anime Scene Finder</title>
 </head>
 <body>
@@ -37,6 +37,7 @@
                 <h1 class="results__title title">Here Are Your Results:</h1>
                 <div class="anime-list">
                     <div class="anime">
+                      <img src="" id="anime__image" class="anime__img">
                       <div class="anime__title">
                         Anime Title:
                       </div>
@@ -47,6 +48,12 @@
                         Appears at Timestamp:
                       </div>
                     </div>
+                  </div>
+                  <div class="sort__buttons">
+                    <button class="sort__button click" onclick="sortByTimestamp()">Sort By Timestamp</button>
+                    <button class="sort__button click" onclick="sortByEpisode()">Sort By Episode #</button>
+                    <button class="sort__button click" onclick="sortByLeastLikely()">Sort By Least Likely</button>
+                    <button class="sort__button click" onclick="sortByMostLikely()">Sort By Most Likely</button>
                   </div>
             </div>
         </div>
